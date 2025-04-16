@@ -5,7 +5,6 @@ test('amazon add card',async()=>{
     const page = await context.newPage();
 
     await page.goto('https://www.amazon.in/');
-
     const all = await page.getByTitle('Search in');
     await all.selectOption('search-alias=electronics');
     await page.waitForTimeout(3000);
